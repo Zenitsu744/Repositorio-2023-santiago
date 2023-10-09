@@ -1,0 +1,29 @@
+def mundial_con_mas_goles(encuentros):
+    goles_por_mundial = {} 
+
+    for partido in encuentros:
+        if partido[12] == 'Final':
+            goles = partido[16]
+            mundial = partido[15]
+
+
+            if mundial not i in goles_por_mundial:
+                goles_por_mundial[mundial] = 0
+            goles_por_mundial[mundial] + goles
+
+    if not goles_por_mundial:
+        print("No se encontraron los datos necesarios de los goles en los Mundiales.")
+        return
+
+    
+    max_goles = 0
+    mundial_max_goles = None
+
+    for mundial, goles in goles_por_mundial():
+        if goles > max_goles:
+         max_goles = goles
+         mundial_max_goles = mundial
+
+    print("\n---------------Mundial con Mayor Número de Goles Registrados----------------\n")
+    print(f"El Mundial {mundial_max_goles} tuvo un total de {max_goles} goles registrados.")
+
